@@ -8,6 +8,11 @@ const resultEnglish = $.querySelector('.result-en')
 const resultPersian = $.querySelector('.result-fa')
 const resultNumber = $.querySelector('.result-number')
 const emojyCover = $.querySelector('.emojy')
+const loadingPage = $.querySelector('.loading')
+
+function loadingHandler() {
+    loadingPage.classList.add('hidden')
+}
 
 function BmiCalculatorHandler() {
     let weightValue = weightInput.value
@@ -51,3 +56,4 @@ function BmiCalculatorHandler() {
 
 weightInput.addEventListener('input', BmiCalculatorHandler)
 heightInput.addEventListener('input', BmiCalculatorHandler)
+window.addEventListener('load', loadingHandler)

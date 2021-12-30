@@ -29,6 +29,37 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/* loading */
+.loading {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading img {
+    width: 380px;
+}
+
+.loading.hidden {
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/*main - style*/
 .container {
     width: 370px;
     height: 470px;
@@ -131,7 +162,7 @@ input[type="range"]::-webkit-slider-thumb {
     position: fixed;
     bottom: -20px;
     text-align: center;
-    z-index: 1000;
+    z-index: 10;
 }
 
 .image img {
