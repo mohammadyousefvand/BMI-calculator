@@ -10,9 +10,7 @@ const resultNumber = $.querySelector('.result-number')
 const emojyCover = $.querySelector('.emojy')
 const loadingPage = $.querySelector('.loading')
 
-function loadingHandler() {
-    loadingPage.classList.add('hidden')
-}
+// function
 
 function BmiCalculatorHandler() {
     let weightValue = weightInput.value
@@ -54,6 +52,7 @@ function BmiCalculatorHandler() {
 
 }
 
+// Event
+
 weightInput.addEventListener('input', BmiCalculatorHandler)
 heightInput.addEventListener('input', BmiCalculatorHandler)
-window.addEventListener('load', loadingHandler)
